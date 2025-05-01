@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block title %}About Us - Interior Design Studio{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="container">
+        <h1>About Our Studio</h1>
+        <p>Passionate about creating spaces that inspire and transform lives.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 4rem;">
+            <div>
+                <h2 class="section-title">Our Story</h2>
+                <p>Founded in 2010, our interior design studio has been dedicated to creating beautiful, functional spaces that reflect our clients' unique personalities and lifestyles. We believe that great design should be accessible to everyone, and we work closely with our clients to bring their vision to life.</p>
+                <p>Our team of experienced designers brings together diverse backgrounds in architecture, interior design, and fine arts to create spaces that are both aesthetically pleasing and highly functional.</p>
+            </div>
+            <div>
+                <h2 class="section-title">Our Approach</h2>
+                <p>We take a collaborative approach to every project, working closely with our clients to understand their needs, preferences, and lifestyle. Our process includes:</p>
+                <ul style="list-style: none; margin-top: 1rem;">
+                    <li style="margin-bottom: 1rem;">✓ Initial consultation and space assessment</li>
+                    <li style="margin-bottom: 1rem;">✓ Concept development and mood boards</li>
+                    <li style="margin-bottom: 1rem;">✓ Detailed design planning</li>
+                    <li style="margin-bottom: 1rem;">✓ Material and furniture selection</li>
+                    <li style="margin-bottom: 1rem;">✓ Project implementation and management</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" style="background-color: var(--light-bg);">
+    <div class="container">
+        <h2 class="section-title">Meet Our Team</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="card-content">
+                    <h3>Sarah Johnson</h3>
+                    <p>Lead Designer</p>
+                    <p>With over 15 years of experience in residential and commercial design, Sarah brings a unique perspective to every project.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>Michael Chen</h3>
+                    <p>Space Planning Specialist</p>
+                    <p>Michael's expertise in space optimization and functional design ensures that every project maximizes its potential.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>Emily Rodriguez</h3>
+                    <p>Materials Consultant</p>
+                    <p>Emily's extensive knowledge of materials and finishes helps create spaces that are both beautiful and sustainable.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %} 
