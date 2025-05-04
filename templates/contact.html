@@ -12,29 +12,27 @@
 
 <section class="section">
     <div class="container">
-        <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 4rem;">
-            <div>
+        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem;">
+            <div class="contact-info">
                 <h2 class="section-title">Contact Information</h2>
-                <div style="margin-top: 2rem;">
+                <div>
                     <h3>Office Address</h3>
                     <p>Service Road, OPP Police Station<br>
                     Kodakara, Kerala-680 684<br>
                     THRISSUR, Kerala</p>
-                    <div style="margin-top: 1rem;">
-                        <a href="https://maps.google.com/?q=9887+CX+Kodakara,+Kerala" target="_blank" class="button">View on Google Maps</a>
-                    </div>
+                    <a href="https://maps.google.com/?q=9887+CX+Kodakara,+Kerala" target="_blank" class="button">View on Google Maps</a>
                 </div>
-                <div style="margin-top: 2rem;">
+                <div>
                     <h3>Contact Details</h3>
                     <p>Phone: <a href="tel:+919946826583">+91 99468 26583</a><br>
                     Email: info@picktopinteriors.com</p>
                 </div>
-                <div style="margin-top: 2rem;">
+                <div>
                     <h3>Business Hours</h3>
                     <p>Monday - Saturday: 9:00 AM - 7:00 PM<br>
                     Sunday: Closed</p>
                 </div>
-                <div style="margin-top: 2rem;">
+                <div>
                     <h3>Follow Us</h3>
                     <div class="social-links">
                         <a href="https://facebook.com/picktopinteriors" target="_blank" class="social-icon">
@@ -51,7 +49,7 @@
             </div>
             <div>
                 <h2 class="section-title">Send Us a Message</h2>
-                <form method="POST" action="{{ url_for('contact') }}" style="margin-top: 2rem;">
+                <form method="POST" action="{{ url_for('contact') }}">
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" id="name" name="name" required>
@@ -96,7 +94,6 @@
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3924.6978563112375!2d76.3149861!3d10.366025899999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7f999eb7b86f1%3A0x18b2045676634269!2sPICK%20TOP%20INTERIOR&#39;S%20DECOR%20%26%20STEEL%20DOOR&#39;S!5e0!3m2!1sen!2sin!4v1746360159193!5m2!1sen!2sin" 
                 width="100%" 
                 height="450" 
-                style="border:0;" 
                 allowfullscreen="" 
                 loading="lazy" 
                 referrerpolicy="no-referrer-when-downgrade">
