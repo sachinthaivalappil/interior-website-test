@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <div class="mobile-menu-overlay"></div>
     <nav class="navbar">
         <div class="container">
             <a href="/" class="logo">PICK TOP INTERIOR'S</a>
@@ -73,36 +74,42 @@
         document.addEventListener('DOMContentLoaded', function() {
             const menuBtn = document.querySelector('.mobile-menu-btn');
             const navLinks = document.querySelector('.nav-links');
+            const overlay = document.querySelector('.mobile-menu-overlay');
             
             menuBtn.addEventListener('click', function() {
                 navLinks.classList.toggle('active');
+                overlay.classList.toggle('active');
                 const icon = menuBtn.querySelector('i');
                 if (navLinks.classList.contains('active')) {
                     icon.classList.remove('fa-bars');
                     icon.classList.add('fa-times');
+                    document.body.style.overflow = 'hidden';
                 } else {
                     icon.classList.remove('fa-times');
                     icon.classList.add('fa-bars');
+                    document.body.style.overflow = '';
                 }
             });
 
-            // Close menu when clicking outside
-            document.addEventListener('click', function(event) {
-                if (!event.target.closest('.navbar')) {
-                    navLinks.classList.remove('active');
-                    const icon = menuBtn.querySelector('i');
-                    icon.classList.remove('fa-times');
-                    icon.classList.add('fa-bars');
-                }
+            // Close menu when clicking overlay
+            overlay.addEventListener('click', function() {
+                navLinks.classList.remove('active');
+                overlay.classList.remove('active');
+                const icon = menuBtn.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+                document.body.style.overflow = '';
             });
 
             // Close menu when clicking a link
             navLinks.addEventListener('click', function(event) {
                 if (event.target.tagName === 'A') {
                     navLinks.classList.remove('active');
+                    overlay.classList.remove('active');
                     const icon = menuBtn.querySelector('i');
                     icon.classList.remove('fa-times');
                     icon.classList.add('fa-bars');
+                    document.body.style.overflow = '';
                 }
             });
         });
