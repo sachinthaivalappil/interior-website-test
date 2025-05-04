@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 
-{% block title %}About Us - Interior Design Studio{% endblock %}
+{% block title %}About Us - PICK TOP INTERIOR'S DECOR & STEEL DOOR'S{% endblock %}
 
 {% block content %}
 <section class="hero">
     <div class="container">
-        <h1>About Our Company</h1>
-        <p>Your trusted partner for comprehensive interior and exterior design solutions.</p>
+        <h1>About PICK TOP INTERIOR'S</h1>
+        <p>Your trusted partner for premium interior decor and steel door solutions.</p>
     </div>
 </section>
 
@@ -15,8 +15,8 @@
         <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 4rem;">
             <div>
                 <h2 class="section-title">Our Story</h2>
-                <p>We are a leading provider of interior and exterior design solutions, specializing in high-quality doors, windows, furnishings, and construction works. Our commitment to excellence and customer satisfaction has made us a trusted name in the industry.</p>
-                <p>With years of experience, we bring together expertise in design, fabrication, and installation to deliver comprehensive solutions for both residential and commercial spaces. Our team of skilled professionals ensures that every project meets the highest standards of quality and craftsmanship.</p>
+                <p>At PICK TOP INTERIOR'S DECOR & STEEL DOOR'S, we are a leading provider of premium interior solutions and steel doors. Our commitment to excellence and customer satisfaction has made us a trusted name in the industry.</p>
+                <p>With years of experience, we bring together expertise in interior decor, steel door manufacturing, and installation to deliver comprehensive solutions for both residential and commercial spaces. Our team of skilled professionals ensures that every project meets the highest standards of quality and craftsmanship.</p>
             </div>
             <div>
                 <h2 class="section-title">Our Approach</h2>
@@ -38,18 +38,25 @@
         <h2 class="section-title">Our Expertise</h2>
         <div class="grid">
             <div class="card">
+                <img src="{{ url_for('static', filename='images/steel-door.png') }}" alt="Doors & Windows" class="card-image">
                 <div class="card-content">
                     <h3>Doors & Windows</h3>
                     <p>Expert installation of various types of doors and windows including Steel, WPC, Teak Wood, Fiber, PVC, UPVC, and Aluminium options.</p>
                 </div>
             </div>
             <div class="card">
+                <div class="card-image-placeholder">
+                    <i class="fas fa-home"></i>
+                </div>
                 <div class="card-content">
                     <h3>Interior Solutions</h3>
                     <p>Comprehensive interior services including modular kitchens, wardrobes, prayer units, showcases, and ceiling works.</p>
                 </div>
             </div>
             <div class="card">
+                <div class="card-image-placeholder">
+                    <i class="fas fa-tools"></i>
+                </div>
                 <div class="card-content">
                     <h3>Construction & Fabrication</h3>
                     <p>Professional construction works, aluminium fabrication, glass works, and complete interior & exterior solutions.</p>

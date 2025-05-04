@@ -3,19 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Interior Design Studio{% endblock %}</title>
+    <title>{% block title %}PICK TOP INTERIOR'S DECOR & STEEL DOOR'S{% endblock %}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <nav class="navbar">
         <div class="container">
-            <a href="/" class="logo">Interior Design Studio</a>
+            <a href="/" class="logo">PICK TOP INTERIOR'S</a>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
             <ul class="nav-links">
                 <li><a href="/">Home</a></li>
                 <li><a href="/about">About</a></li>
                 <li><a href="/services">Services</a></li>
                 <li><a href="/contact">Contact</a></li>
+                <li class="social-links-nav">
+                    <a href="https://wa.me/919946826583" target="_blank" title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="tel:+919946826583" title="Call Us">
+                        <i class="fas fa-phone"></i>
+                    </a>
+                </li>
             </ul>
         </div>
     </nav>
@@ -34,8 +46,66 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Interior Design Studio. All rights reserved.</p>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>Service Road, OPP Police Station<br>
+                    Kodakara, Kerala-680 684<br>
+                    Phone: <a href="tel:+919946826583">+91 99468 26583</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="https://facebook.com/picktopinteriors" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://instagram.com/picktopinteriors" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/919946826583" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 PICK TOP INTERIOR'S DECOR & STEEL DOOR'S. All rights reserved.</p>
+            </div>
         </div>
     </footer>
+
+    <script>
+        // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            const navLinks = document.querySelector('.nav-links');
+            
+            menuBtn.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+                const icon = menuBtn.querySelector('i');
+                if (navLinks.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', function(event) {
+                if (!event.target.closest('.navbar')) {
+                    navLinks.classList.remove('active');
+                    const icon = menuBtn.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+
+            // Close menu when clicking a link
+            navLinks.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                    navLinks.classList.remove('active');
+                    const icon = menuBtn.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+        });
+    </script>
 </body>
 </html> 
